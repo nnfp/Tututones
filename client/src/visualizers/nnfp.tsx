@@ -14,7 +14,7 @@ export const nnfuVisualizer = new Visualizer(
 
     p5.background(0, 0, 0, 255);
     p5.translate(width, height/2);
-    p5.stroke(255, 212, 212, 255);
+    p5.stroke(254, 253, 194, 255);
     p5.noFill();
 
     const values = analyzer.getValue();

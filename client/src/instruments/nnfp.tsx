@@ -15,6 +15,7 @@ function MeepSound(): JSX.Element {
         B1: "../meeps/Bard.meepSpawn07.ogg",
         D2: "../meeps/Bard.meepSpawn08.ogg",
         E2: "../meeps/Bard.meepSpawn09.ogg"
+
       },
     }).toDestination()
   );
