@@ -28,6 +28,7 @@ type DispatchActionType =
   | 'DELETE_SOCKET'
   | 'SET_SONGS'
   | 'PLAY_SONG'
+  | 'FIND_SONG'
   | 'STOP_SONG'
   | 'SET_LOCATION';
 
@@ -74,6 +75,10 @@ export function appReducer(state: AppState, action: DispatchAction): AppState {
           .find((s: any) => s.get('id') === args.get('id'))
           .get('notes');
         return state.set('notes', notes);
+      }
+      case 'FIND_SONG':{
+        const songs = args.get('songs');
+        return state.set('songs', songs);
       }
       case 'STOP_SONG': {
         return state.delete('notes');

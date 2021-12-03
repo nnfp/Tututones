@@ -22,8 +22,8 @@ function App() {
     initializeSocket(
       async socket => {
         dispatch(new DispatchAction('SET_SOCKET', { socket }));
-        const { songs } = await send(socket, 'get_songs', {});
-        dispatch(new DispatchAction('SET_SONGS', { songs }));
+        const { songs } = await send(socket, 'get_songs', {}); // we send a spcket get songs and that message handles returns songs next line
+        dispatch(new DispatchAction('SET_SONGS', { songs })); //then go into reducer line 69 get it and set it
       },
       () => {
         dispatch(new DispatchAction('DELETE_SOCKET'));

@@ -15,6 +15,7 @@ import { AppState } from './State';
 import { Instrument } from './Instruments';
 import { Visualizer } from './Visualizers';
 
+import { useState } from "react";
 
 /** ------------------------------------------------------------------------ **
  * All the components in the side navigation.
@@ -122,6 +123,31 @@ function Songs({ state, dispatch }: SideNavProps): JSX.Element {
   );
 }
 
+function FindByGenre({ state, dispatch }: SideNavProps): JSX.Element {
+  const songs: List<any> = state.get('songs', List());
+  console.log(songs);
+  return (
+    <Section title="Find Song by Genre">
+
+      <button id="christmas" onClick={()=>dispatch(new DispatchAction('FIND_SONG'))}>Christmas Songs</button>
+      <hr></hr>
+      {songs.map(song => (
+        <div
+          key={song.get('id')}
+          className="f6 pointer underline flex items-center no-underline i dim"
+          
+          onClick={() =>
+            dispatch(new DispatchAction('FIND_SONG', { id: song.get('id') }))
+          }
+        >
+          <Music20 className="mr1" />
+          {song.get('songTitle')}
+        </div>
+      ))}
+    </Section>
+  );
+}
+
 export function SideNav({ state, dispatch }: SideNavProps): JSX.Element {
   return (
     <div className="absolute top-0 left-0 bottom-0 w5 z-1 shadow-1 bg-white flex flex-column">
@@ -132,6 +158,7 @@ export function SideNav({ state, dispatch }: SideNavProps): JSX.Element {
         <Instruments state={state} dispatch={dispatch} />
         <Visualizers state={state} dispatch={dispatch} />
         <Songs state={state} dispatch={dispatch} />
+        <FindByGenre state={state} dispatch={dispatch} />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { DB } from './Database';
 import http from 'http';
 import { MessageHandler } from './MessageHandler';
 import { GetSongsHandler } from './handlers/GetSongsHandler';
+import { GetSongsGenreChristmas } from './handlers/GetSongsHandler';
 
 const PORT = 3001;
 const VALID_ORIGINS = ['http://localhost:3000'];
@@ -11,7 +12,7 @@ const PING_INTERVAL_MS = 10000;
 const WS_PATH = '/ws';
 
 // Add messages you'd like to support here
-export const validMessages: MessageHandler[] = [GetSongsHandler];
+export const validMessages: MessageHandler[] = [GetSongsHandler, GetSongsGenreChristmas];
 
 function disconnectHandler(socket: Socket): (reason: string) => void {
    return reason => {
