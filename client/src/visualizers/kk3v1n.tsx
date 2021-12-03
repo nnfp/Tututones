@@ -15,8 +15,6 @@ export const KevinVisualizer = new Visualizer("Mickey Mouse",
      const values = analyzer.getValue();
      p5.translate(width, height/2)
 
-     p5.beginShape();
- 
      for(let i =0;i<values.length;i++){
        let amplitude = values[i] as number;
        p5.colorMode("hsb");
@@ -29,7 +27,6 @@ export const KevinVisualizer = new Visualizer("Mickey Mouse",
        let x1 = centerOfCircle1 * p5.cos(angle);
        let y1 = centerOfCircle1 * p5.sin(angle);
 
-       p5.vertex(x,y+30) //inner
        p5.ellipse(x,y+30,20) //outer
 
        p5.ellipse(x1-90,y1-70,10) //ears
@@ -37,7 +34,6 @@ export const KevinVisualizer = new Visualizer("Mickey Mouse",
        
        p5.fill(i,255,255)
      }
-     p5.endShape();
    },
 );
  
