@@ -45,11 +45,10 @@ function BorkSound(): JSX.Element {
   return (
     <div>
       <div style={{
-      fontSize:`24px`, 
+      fontSize:`24px`,
+      marginLeft:`3rem`, 
       marginTop:`3rem`,
       display: "flex",
-      justifyContent: "center",
-      alignItems:"center",
       outline: "none"
     }}>
         <button style={{width: `100px`, height: `100px`, background:`white`, border: `2px solid #000000`}}onClick={borkC}> C </button>
@@ -64,4 +63,4 @@ function BorkSound(): JSX.Element {
   );
 }
 
-export const borkInstrument = new Instrument('bork', BorkSound);
+export const AnselInstrument = new Instrument('bork', BorkSound);
