@@ -6,8 +6,8 @@ import * as Tone from 'tone';
 import { Visualizer } from '../Visualizers';
 
 
-export const nnfuVisualizer = new Visualizer(
-  'nnfu',
+export const nnfpVisualizer = new Visualizer(
+  'nnfp',
   (p5: P5, analyzer: Tone.Analyser) => {
     const width = window.innerWidth / 2.5;
     const height = window.innerHeight / 2;
