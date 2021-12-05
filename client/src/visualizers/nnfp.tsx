@@ -7,7 +7,7 @@ import { Visualizer } from '../Visualizers';
 
 
 export const nnfpVisualizer = new Visualizer(
-  'nnfp',
+  'fuzzball',
   (p5: P5, analyzer: Tone.Analyser) => {
     const width = window.innerWidth / 2.5;
     const height = window.innerHeight / 2;
