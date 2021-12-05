@@ -40,13 +40,13 @@ export const ekirwanVisualizer = new Visualizer(
       
      console.log(amplitude)
      
-      p5.translate(width/2, height/2)
+      p5.translate(width/3, height/2)
       for (let j = 0; j < 10; j ++) {
         p5.ellipse(0, 0 , height*amplitude/2, height*amplitude*2);
         
         p5.rotate((p5.PI)/6);
       }
-      p5.translate(-width/2, -height/2)
+      p5.translate(-width/3, -height/2)
       p5.fill(0, 256/2-i/2, 256-i)
       p5.circle(width/2, height/2, 100*amplitude,)
       xval=xval+20;
