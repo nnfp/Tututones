@@ -338,4 +338,4 @@ function Flute({ synth, setSynth }: InstrumentProps): JSX.Element {
   );
 }
 
-export const ekirwanInstrument = new Instrument('ekirwan', Flute);
+export const ekirwanInstrument = new Instrument('Flute', Flute);
