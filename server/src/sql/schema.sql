@@ -4,13 +4,31 @@ PRAGMA foreign_keys;
 -- NOTE: For the SQL assignment, we could have them normalize
 -- this database farther. Perhaps they can learn about SERIAL and
 -- then go implement a way to change a room_name without losing
--- references by using a FOREIGN KEY into a rooms table with an 
+-- references by using a FOREIGN KEY into a rooms table wcdith an 
 -- int primary key.
 CREATE TABLE songs (
-	id int NOT NULL PRIMARY KEY,
-	song_title text NOT NULL,
-	notes varchar NOT NULL
+    id int NOT NULL PRIMARY KEY,
+    song_title text NOT NULL,
+    artist text NOT NULL,
+    genre text NOT NULL,
+    notes varchar NOT NULL
 );
 
+INSERT INTO songs (id, song_title, artist, genre, notes) 
+VALUES (1, 'Ode to Joy (Dubstep Remix)', 'Ludwig van Beethovens Symphony', 'christmas', 'E4 E4 F4 G4 G4 F4 E4 D4 C4 C4 D4 E4 E4 D4 D4');
+
+INSERT INTO songs (id, song_title, artist, genre, notes)
+VALUES(2, 'Baby Shark', 'Pinkfong' , 'kids', 'C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 F2 F2 E4'); 
+
+INSERT INTO songs (id, song_title, artist, genre, notes)
+VALUES(3, 'Jingle Bells', 'James Lord Pierpont', 'christmas', 'E4 E4 E4 E4 E4 E4 E4 G4 C4 D4 E4 
+F4 F4 F4 F4 F4 E4 E4 E4 E4 E4 D4 D4 E4 D4 G4'); 
+
 INSERT INTO songs (id, song_title, notes) 
-VALUES (1, 'Ode to Joy (Dubstep Remix)', 'E4 E4 F4 G4 G4 F4 E4 D4 C4 C4 D4 E4 E4 D4 D4');
+VALUES (4, 'nnfu 1', 'F4 G4 A4 C4 C4 C4 F4 E4 E4 D4 D4 C4 C4 C4');
+
+INSERT INTO songs (id, song_title, notes) 
+VALUES (5, 'nnfu 2', 'C D Dd C Cd B A Aa D Dd C Cc B Bb A Aa');
+
+INSERT INTO songs (id, song_title, artist, genre, notes) 
+VALUES (6, 'Star Wars', 'John Williams', 'Movie Score', 'C4 G4 F4 E4 D4 C5 G4 F4 E4 D4 C5 G4 F4 E4 F4 D4')

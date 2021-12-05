@@ -71,4 +71,4 @@ function MeepSound(): JSX.Element {
   );
 }
 
-export const nnfuInstrument = new Instrument('nnfu', MeepSound);
+export const nnfpInstrument = new Instrument('bard', MeepSound);
