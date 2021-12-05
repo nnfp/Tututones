@@ -18,17 +18,11 @@ INSERT INTO songs (id, song_title, artist, genre, notes)
 VALUES (1, 'Ode to Joy (Dubstep Remix)', 'Ludwig van Beethovens Symphony', 'christmas', 'E4 E4 F4 G4 G4 F4 E4 D4 C4 C4 D4 E4 E4 D4 D4');
 
 INSERT INTO songs (id, song_title, artist, genre, notes)
-VALUES(2, 'Baby Shark', 'Pinkfong' , 'kids', 'C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 F2 F2 E4'); 
-
-INSERT INTO songs (id, song_title, artist, genre, notes)
-VALUES(3, 'Jingle Bells', 'James Lord Pierpont', 'christmas', 'E4 E4 E4 E4 E4 E4 E4 G4 C4 D4 E4 
+VALUES(2, 'Jingle Bells', 'James Lord Pierpont', 'christmas', 'E4 E4 E4 E4 E4 E4 E4 G4 C4 D4 E4 
 F4 F4 F4 F4 F4 E4 E4 E4 E4 E4 D4 D4 E4 D4 G4'); 
 
 INSERT INTO songs (id, song_title, artist, genre, notes) 
-VALUES (2, 'nnfu 1', nnfu, alternative, 'F4 G4 A4 C4 C4 C4 F4 E4 E4 D4 D4 C4 C4 C4');
+VALUES (3, 'nnfu 1', 'nnfu', 'alternative', 'F4 G4 A4 C4 C4 C4 F4 E4 E4 D4 D4 C4 C4 C4');
 
 INSERT INTO songs (id, song_title, artist, genre, notes) 
-VALUES (3, 'nnfu 2', nnfu, alternative, 'C D Dd C Cd B A Aa D Dd C Cc B Bb A Aa');
-
-INSERT INTO songs (id, song_title, artist, genre, notes) 
-VALUES (6, 'Star Wars', 'John Williams', 'Movie Score', 'C4 G4 F4 E4 D4 C5 G4 F4 E4 D4 C5 G4 F4 E4 F4 D4')
+VALUES (4, 'Star Wars', 'John Williams', 'Movie Score', 'C4 G4 F4 E4 D4 C5 G4 F4 E4 D4 C5 G4 F4 E4 F4 D4');
