@@ -8,7 +8,7 @@ import { Visualizer } from '../Visualizers';
 
 
 export const AnselVisualizer = new Visualizer(
-  'ngaiansel',
+  'wacky and wild',
   (p5: P5, analyzer: Tone.Analyser) => {
     const width = window.innerWidth/2.5;
     const height = window.innerHeight / 2;
