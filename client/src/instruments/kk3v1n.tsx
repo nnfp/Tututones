@@ -3,7 +3,6 @@ import * as Tone from 'tone';
 import classNames from 'classnames';
 import { List, Range } from 'immutable';
 import React from 'react';
-import { useState } from 'react';
 
 // project imports
 import { Instrument, InstrumentProps } from '../Instruments';
@@ -48,6 +47,30 @@ export function ViolinString({
 function Violin({synth}: InstrumentProps): JSX.Element {
 
   //lowest to highest sound like a violin G,D,A,E
+
+  const player1 = new Tone.Player("../violinStrings/aString.mp3").toDestination();
+  const player2 = new Tone.Player("../violinStrings/dString.mp3").toDestination();
+  const player3 = new Tone.Player("../violinStrings/gString.mp3").toDestination();
+  const player4 = new Tone.Player("../violinStrings/eString.mp3").toDestination();
+
+  const sample_soundA =() =>{
+    player1.start();
+    player1.stop("+0.5");
+  } 
+
+  const sample_soundD =() =>{
+    player2.start();
+    player2.stop("+0.5");
+  } 
+  const sample_soundG =() =>{
+    player3.start();
+    player3.stop("+0.5");
+  } 
+  const sample_soundE =() =>{
+    player4.start();
+    player4.stop("+0.5");
+  } 
+  
   const keys = List([
     { note: "C", idx: 0 },
     { note: 'C', idx: 0.5 },
@@ -77,25 +100,9 @@ function Violin({synth}: InstrumentProps): JSX.Element {
 
   return (
     <div className="pv4">
-      
-      <div
-      className={classNames('ba pointer absolute dim', {
-      })}
-      style={{
-        // CSS
-        pointerEvents: "none",
-        width: '72rem',
-        height: "200px",
-        backgroundImage: `url("${Background}")`,
-        backgroundPositionX:"",
-        backgroundPositionY: "-100px",
-        backgroundSize: "cover",
-        marginLeft:"2rem",
-      }}
-    ></div>
-
+       
         <div
-      className={classNames('ba pointer absolute dim', {
+      className={classNames('ba pointer absolute', {
       })}
       style={{
         // CSS
@@ -111,7 +118,7 @@ function Violin({synth}: InstrumentProps): JSX.Element {
     ></div>
     
     <div
-      className={classNames('ba absolute dim', {
+      className={classNames('ba absolute', {
       })}
       style={{
         // CSS
@@ -195,8 +202,18 @@ function Violin({synth}: InstrumentProps): JSX.Element {
           }),
         )}
       </div>
+
+          <div className={classNames('ba absolute', {
+      })} 
+      style={{marginLeft:"59rem", marginTop:"-18rem", width:"40px"}}>
+        <button style={{marginBottom:"5px"}} onClick={sample_soundG}>G String</button>
+        <button style={{marginBottom:"8px"}} onClick={sample_soundD}>D String</button>
+        <button style={{marginBottom:"7px"}} onClick={sample_soundA}>A String</button>
+        <button onClick={sample_soundE}>E String</button>
+        </div>
+
     </div>
   );
 }
 
-export const ViolinInstrument1 = new Instrument('Violin2', Violin);
+export const ViolinInstrument1 = new Instrument('Violin', Violin);
