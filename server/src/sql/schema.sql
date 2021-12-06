@@ -26,3 +26,10 @@ VALUES (3, 'nnfu 1', 'nnfu', 'alternative', 'F4 G4 A4 C4 C4 C4 F4 E4 E4 D4 D4 C4
 
 INSERT INTO songs (id, song_title, artist, genre, notes) 
 VALUES (4, 'Star Wars', 'John Williams', 'Movie Score', 'C4 G4 F4 E4 D4 C5 G4 F4 E4 D4 C5 G4 F4 E4 F4 D4');
+
+INSERT INTO songs (id, song_title, artist, genre, notes) 
+VALUES (5, 'Centerfold', 'J. Geils Band', 'rock','G4 F4 C4 F4 C4 G4 F4 C4 F4 C4');
+
+INSERT INTO songs (id, song_title, artist, genre, notes)
+VALUES(6, 'Baby Shark', 'Pinkfong' , 'kids song', 'C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 C4 D4 F3 F4 F4 F4 F4 F4 F4 F4 F2 F2 E4'); 
+
