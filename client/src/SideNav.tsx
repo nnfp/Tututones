@@ -115,7 +115,7 @@ function Songs({ state, dispatch }: SideNavProps): JSX.Element {
           }
         >
           <Music20 className="mr1" />
-          {song.get('songTitle')}
+          {song.get('songTitle') + " -"}  {song.get('artist')}
         </div>
       ))}
     </Section>
@@ -126,7 +126,7 @@ export function SideNav({ state, dispatch }: SideNavProps): JSX.Element {
   return (
     <div className="absolute top-0 left-0 bottom-0 w5 z-1 shadow-1 bg-white flex flex-column">
       <div className="h3 fw7 f5 flex items-center pl3 bb b--light-gray">
-        Nameless App
+        TUTUTONES
       </div>
       <div className="flex-auto">
         <Instruments state={state} dispatch={dispatch} />
